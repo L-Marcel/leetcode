@@ -3,6 +3,9 @@
 // O(n) time, O(1) space
 // Runtime: 0 ms, faster than 100.00%
 
+// Better I saw is O(n) time, O(1) space
+// At 05/11/24
+
 #[allow(dead_code)]
 pub fn min_changes(s: String) -> i32 {
     s.as_bytes().chunks(2).map(|chunk: &[u8]| {
