@@ -6,12 +6,12 @@
 // Better I saw is O(n) time, O(1) space
 // At 05/11/24
 
-#[allow(dead_code)]
 pub fn min_changes(s: String) -> i32 {
+    //O(n) + O(n) = O(n)
     s.as_bytes().chunks(2).map(|chunk: &[u8]| {
         match chunk {
-            [a, b] if a == b => 1,
-            _ => 0
+            [a, b] if a == b => 0,
+            _ => 1
         }
     }).sum::<i32>()
 }
