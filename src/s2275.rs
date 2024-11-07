@@ -12,7 +12,7 @@ pub fn largest_combination(candidates: Vec<i32>) -> i32 {
 
     //O(n)
     candidates.iter().for_each(|x| {
-        //O(24) = O(1)
+        //O(24) = O(1) -> max number is 2^24 for this problem
         let mut size: u32 = x.ilog2() + 1;
         while size > 0 {
             if x & (1 << size - 1) != 0 {
