@@ -7,17 +7,17 @@
 // At 09/11/24
 
 pub fn min_end(n: i32, x: i32) -> i64 {
-    let size = 32 - x.leading_zeros();
-    let spaces = (((1 << size) - 1) - x).count_ones() as i32;
-    let combinations = 1 << spaces;
-    let rest = (n - 1) % combinations;
-    let border = ((n - 1) / combinations) as i64;
+    let size: u32 = 32 - x.leading_zeros();
+    let spaces: i32 = (((1 << size) - 1) - x).count_ones() as i32;
+    let combinations: i32 = 1 << spaces;
+    let rest: i32 = (n - 1) % combinations;
+    let border: i64 = ((n - 1) / combinations) as i64;
     let left: i64 = (border << size) as i64;
 
     //O(32) = O(1)
-    let mut bit = 1;
-    let mut rest_bit = 1_i32;
-    let mut right = x;
+    let mut bit: i32 = 1;
+    let mut rest_bit: i32 = 1;
+    let mut right: i32 = x;
     while bit <= (1 << (size - 1)) {
         if right & bit == 0 {
             if rest_bit & rest != 0 {
