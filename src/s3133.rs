@@ -18,7 +18,8 @@ pub fn min_end(n: i32, x: i32) -> i64 {
     let mut bit: i32 = 1;
     let mut rest_bit: i32 = 1;
     let mut right: i32 = x;
-    while bit <= (1 << (size - 1)) {
+    let max_bit: i32 = 1 << (size - 1);
+    while bit <= max_bit {
         if right & bit == 0 {
             if rest_bit & rest != 0 {
                 right |= bit;
