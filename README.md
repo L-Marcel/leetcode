@@ -2,8 +2,7 @@
 
 No geral, percebi que sempre que dá `0ms` de tempo de execução o `leetcode` diz que bate `100%` das outras submissões, o que não é bem verdade. Algumas respostas minhas aqui não são necessariamente das melhores, sendo fruto de certa pesquisa também (estou estudando `rust`).
 
-Também não vale a pena eu ficar sempre registrando aqui as melhores respostas que eu ver se não foi eu que fiz. Portanto, estarei deixando sempre comentários nas minhas respostas registradas aqui, por exemplo:
-
+Estarei deixando sempre comentários nas minhas respostas registradas aqui, por exemplo:
 ```
 // Problem title...
 
@@ -14,4 +13,4 @@ Também não vale a pena eu ficar sempre registrando aqui as melhores respostas 
 // At 06/11/24
 ```
 
-Outra coisa, meu inglês é relativamente ruim, mas eu não gosto de colocar português dentro do código.
+Vale destacar que algumas eu não consegui resolver por conta própria (acontece), como por exemplo a `s3097` e que meu inglês é relativamente ruim, mas eu não gosto de colocar português dentro do código.
