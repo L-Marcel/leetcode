@@ -13,4 +13,4 @@ Estarei deixando sempre comentários nas minhas respostas registradas aqui, por 
 // At 06/11/24
 ```
 
-Vale destacar que algumas eu não consegui resolver por conta própria (acontece), como por exemplo a `s3097` e que meu inglês é relativamente ruim, mas eu não gosto de colocar português dentro do código.
+Vale destacar que algumas eu não consegui resolver por conta própria (acontece), como por exemplo a `s3097`, e que meu inglês é relativamente ruim, mas eu não gosto de colocar português dentro do código.
