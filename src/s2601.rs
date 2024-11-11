@@ -11,7 +11,7 @@ pub fn prime_sub_operation(mut nums: Vec<i32>) -> bool {
 
     if nums.len() == 1 { return true; };
 
-    //O(log 168) = O(7) = O(1) -> binary search
+    //O(log_2 168) = O(7) = O(1) -> binary search
     let pos = primes.partition_point(|prime| {
         let _prime = *prime as i32;
         _prime < nums[0]
@@ -24,7 +24,7 @@ pub fn prime_sub_operation(mut nums: Vec<i32>) -> bool {
         let previous = nums[i - 1];
         let current = nums[i];
 
-        //O(log 168) = O(7) = O(1) -> binary search
+        //O(log_2 168) = O(7) = O(1) -> binary search
         let pos = primes.partition_point(|prime| {
             let _prime = *prime as i32;
             _prime < current && (current - _prime) > previous
