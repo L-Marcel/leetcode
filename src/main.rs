@@ -5,6 +5,7 @@ mod s1829;
 mod s3133;
 mod s3097;
 mod s2601;
+mod s796;
 
 fn main() {
     assert_eq!(s2914::min_changes("0100".to_string()), 1);
@@ -19,4 +20,6 @@ fn main() {
     assert_eq!(s3097::minimum_subarray_length([1,2,3].to_vec(), 2), 1);
     assert_eq!(s3097::minimum_subarray_length([2,1,8].to_vec(), 10), 3);
     assert_eq!(s2601::prime_sub_operation([4,9,6,10].to_vec()), true);
+    assert!(s796::rotate_string("abcde".to_string(), "cdeab".to_string()));
+    assert!(s796::rotate_string("defdefdefabcabc".to_string(), "defdefabcabcdef".to_string()));
 }
