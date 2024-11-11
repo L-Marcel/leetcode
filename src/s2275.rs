@@ -21,7 +21,7 @@ pub fn largest_combination(candidates: Vec<i32>) -> i32 {
                 if counter[pos] > bigger { bigger = counter[pos] };
             }
             size -= 1;
-        }
+        };
     });
     
     return bigger;

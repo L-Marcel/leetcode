@@ -1,6 +1,6 @@
 # Observações
 
-No geral, percebi que sempre que dá `0ms` de tempo de execução o `leetcode` diz que bate `100%` das outras submissões, o que não é bem verdade. Algumas respostas minhas aqui não são necessariamente das melhores, sendo fruto de certa pesquisa também (estou estudando `rust`).
+No geral, percebi que sempre que dá `0ms` de tempo de execução o `leetcode` diz que bate `100%` das outras submissões, o que não é bem verdade (então nesse dado eu não estou confiando tanto, apenas tirando de lá e colocando aqui). Algumas respostas minhas aqui não são necessariamente das melhores, sendo fruto de certa pesquisa também (estou estudando `rust`).
 
 Estarei deixando sempre comentários nas minhas respostas registradas aqui, por exemplo:
 ```

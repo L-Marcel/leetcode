@@ -18,7 +18,7 @@ pub fn get_maximum_xor(nums: Vec<i32>, maximum_bit: i32) -> Vec<i32> {
     for x in nums.iter().rev() {
         result.push(xor ^ complement);
         xor ^= x;
-    }
+    };
 
     return result;
 }

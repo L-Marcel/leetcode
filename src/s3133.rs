@@ -23,11 +23,11 @@ pub fn min_end(n: i32, x: i32) -> i64 {
         if right & bit == 0 {
             if rest_bit & rest != 0 {
                 right |= bit;
-            }
+            };
             rest_bit = rest_bit << 1;
         };
         bit = bit << 1;
-    }
+    };
 
     left | (right as i64)
 }

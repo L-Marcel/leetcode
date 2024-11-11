@@ -19,15 +19,15 @@ pub fn minimum_subarray_length(nums: Vec<i32>, k: i32) -> i32 {
         for i in 0..32 {
             if (x >> i) & 1 == 1 {
                 bits[i] += 1;
-            }
-        }
+            };
+        };
 
         let mut current = 0;
         for i in 0..32 {
             if bits[i] != 0 {
                 current |= 1 << i;
-            }
-        }
+            };
+        };
 
         while start <= end && current >= k {
             let size = (end - start + 1) as i32;
@@ -37,21 +37,21 @@ pub fn minimum_subarray_length(nums: Vec<i32>, k: i32) -> i32 {
             for i in 0..32 {
                 if (y >> i) & 1 == 1 {
                     bits[i] -= 1;
-                }
-            }
+                };
+            };
 
             current = 0;
             for i in 0..32 {
                 if bits[i] != 0 {
                     current |= 1 << i;
-                }
-            }
+                };
+            };
 
             start += 1;
-        }
+        };
 
         end += 1;
-    }
+    };
 
     min
 }

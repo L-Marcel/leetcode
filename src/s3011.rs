@@ -15,10 +15,10 @@ pub fn can_sort_array(nums: Vec<i32>) -> bool {
         for y in nums.iter().take(i).rev() {
             if x < y  && x.count_ones() != y.count_ones() {
                 return false;
-            }
-        }
+            };
+        };
         i += 1;
-    }
+    };
 
     true
 }

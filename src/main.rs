@@ -4,6 +4,7 @@ mod s2275;
 mod s1829;
 mod s3133;
 mod s3097;
+mod s2601;
 
 fn main() {
     assert_eq!(s2914::min_changes("0100".to_string()), 1);
@@ -17,4 +18,5 @@ fn main() {
     assert_eq!(s3133::min_end(6715154, 7193485), 55012476815);
     assert_eq!(s3097::minimum_subarray_length([1,2,3].to_vec(), 2), 1);
     assert_eq!(s3097::minimum_subarray_length([2,1,8].to_vec(), 10), 3);
+    assert_eq!(s2601::prime_sub_operation([4,9,6,10].to_vec()), true);
 }
