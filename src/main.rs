@@ -6,6 +6,7 @@ mod s3133;
 mod s3097;
 mod s2601;
 mod s796;
+mod s2070;
 
 fn main() {
     assert_eq!(s2914::min_changes("0100".to_string()), 1);
@@ -22,4 +23,5 @@ fn main() {
     assert_eq!(s2601::prime_sub_operation([4,9,6,10].to_vec()), true);
     assert!(s796::rotate_string("abcde".to_string(), "cdeab".to_string()));
     assert!(s796::rotate_string("defdefdefabcabc".to_string(), "defdefabcabcdef".to_string()));
+    assert_eq!(s2070::maximum_beauty([[1,2],[3,2],[2,4],[5,6],[3,5]].iter().map(|x| x.to_vec()).collect(), [1,2,3,4,5,6].to_vec()), [2,4,5,5,6,6].to_vec());
 }
