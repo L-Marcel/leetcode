@@ -1,9 +1,9 @@
 // 796. Rotate String
 
-// O(n^2) time, O(1) space
+// O(n^2) time, O(n) space
 // Runtime: 0 ms, faster than 100%
 
-// Better I saw is O(n^2) time, O(1) space
+// Better I saw is O(n^2) time, O(n) space
 // At 08/11/24
 
 pub fn rotate_string(s: String, goal: String) -> bool {
