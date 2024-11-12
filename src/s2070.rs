@@ -1,33 +1,35 @@
 // 2070. Most Beautiful Item for Each Query
 
-use std::collections::HashMap;
+// O((n + m)log n) time, O(m) space
+// Runtime: 24 ms, faster than 50%
 
-pub fn maximum_beauty(items: Vec<Vec<i32>>, queries: Vec<i32>) -> Vec<i32> {
-    let mut queries_map: HashMap<i32, i32> = HashMap::with_capacity(queries.len());
-    let mut answers: Vec<i32> = vec![0; queries.len()];
-   
-    for (index, query) in queries.iter().enumerate() {
-        let mapped_queries = queries_map.get(query);
-        match mapped_queries {
-            None => {
-                let mut best = -1;
-                for item in items.iter() {
-                    let price = item[0];
-                    let beauty = item[1];
-                    if price <= *query && (beauty > best || best == -1) {
-                        best = beauty;
-                    };
-                };
+// Better I saw is O((n + m)log n) time, O(m) space
+// At 12/11/24
 
-                if best == -1 { best = 0; };
-                queries_map.insert(*query, best);
-                answers[index] = best;
-            },
-            Some(best) => {
-                answers[index] = *best;
-            }
+//O(nlog n + mlog n) = O((n + m)log n)
+pub fn maximum_beauty(mut items: Vec<Vec<i32>>, queries: Vec<i32>) -> Vec<i32> {
+    //O(nlog_2 n)
+    items.sort_unstable();
+    
+    //O(n)
+    let mut bigger = 0;
+    for item in items.iter_mut() {
+        if item[1] > bigger {
+            bigger = item[1];
+        } else {
+            item[1] = bigger;
         };
     };
 
-    answers
+    //O(m * log_2 n)
+    queries.iter().map(|query| {
+        let best_position = items.partition_point(|item| {
+            item[0] <= *query
+        });
+
+        match  best_position {
+            0 => 0,
+            _ => items[best_position - 1][1]
+        }
+    }).collect()
 }
