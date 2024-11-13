@@ -3,7 +3,7 @@
 // O((n + m)log n) time, O(m) space
 // Runtime: 24 ms, faster than 50%
 
-// Better I saw is O((n + m)log n) time, O(m) space
+// Better I saw is O((n + m)log n) time, O(n + m) space
 // At 12/11/24
 
 //O(nlog n + mlog n) = O((n + m)log n)

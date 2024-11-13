@@ -7,8 +7,11 @@ mod s3097;
 mod s2601;
 mod s796;
 mod s2070;
+mod s2563;
 
 fn main() {
+    assert_eq!(s2563::count_fair_pairs([0,1,7,4,4,5].to_vec(), 3, 6), 6);
+    assert_eq!(s2563::count_fair_pairs([1,7,9,2,5].to_vec(), 11, 11), 1);
     assert_eq!(s2914::min_changes("0100".to_string()), 1);
     assert_eq!(s2914::min_changes("0101".to_string()), 2);
     assert_eq!(s3011::can_sort_array([8,4,2,30,15].to_vec()), true);
