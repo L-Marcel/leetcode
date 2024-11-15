@@ -9,8 +9,12 @@ mod s796;
 mod s2070;
 mod s2563;
 mod s2064;
+mod s1574;
 
 fn main() {
+    assert_eq!(s1574::find_length_of_shortest_subarray([1,2,3].to_vec()), 0);
+    assert_eq!(s1574::find_length_of_shortest_subarray([1,2,3,10,4,2,3,5].to_vec()), 3);
+    assert_eq!(s1574::find_length_of_shortest_subarray([2,2,2,1,1,1].to_vec()), 3);
     assert_eq!(s2064::minimized_maximum(6, [11,6].to_vec()), 3);
     assert_eq!(s2064::minimized_maximum(7, [15,10,10].to_vec()), 5);
     assert_eq!(s2563::count_fair_pairs([0,1,7,4,4,5].to_vec(), 3, 6), 6);
